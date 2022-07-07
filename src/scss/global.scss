@@ -1,8 +1,31 @@
 // Style Utils
 @import "utils/mixins";
+@import "utils/variables";
 @import "utils/fonts";
 @import "utils/reset";
 
+html, body {
+	height: 100%;
+}
+
 body {
-	font-family: 'Roboto', sans-serif;
+	color: $color-text-default;
+
+	@include font(
+		$family: $font-family-roboto,
+		$size: $base-font-size,
+		$weight: $base-font-weight,
+		$line-height: 1,
+	)
+}
+
+.mobile-layout {
+	$layout-width: 375px;
+	$layout-spacing: 0 15px;
+
+	position: relative;
+	margin: 0 auto;
+	padding: $layout-spacing;
+	max-width: $layout-width;
+	min-height: 100%;
 }

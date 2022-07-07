@@ -1,2 +1,8 @@
 // Style Utils
+@import "utils/mixins";
+@import "utils/fonts";
 @import "utils/reset";
+
+body {
+	font-family: 'Roboto', sans-serif;
+}

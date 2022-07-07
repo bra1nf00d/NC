@@ -29,3 +29,12 @@ body {
 	max-width: $layout-width;
 	min-height: 100%;
 }
+
+.caption {
+	@include font(
+		$family: $font-family-montserrat,
+		$weight: 700,
+		$size: 18px,
+		$line-height: 22px,
+	)
+}

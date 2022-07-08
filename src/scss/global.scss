@@ -5,6 +5,9 @@
 @import "utils/fonts";
 @import "utils/reset";
 
+// Style Modules
+@import "components/navigation/header";
+
 html, body {
 	height: 100%;
 }

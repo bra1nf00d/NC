@@ -1,6 +1,7 @@
 // Style Utils
 @import "utils/mixins";
 @import "utils/variables";
+@import "utils/functions";
 @import "utils/fonts";
 @import "utils/reset";
 
@@ -20,8 +21,11 @@ body {
 }
 
 .mobile-layout {
+	// 18.75 - is the starting fluid-typography of the layout
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
 	$layout-width: 375px;
-	$layout-spacing: 0 15px;
+	$layout-spacing: 0 em(15);
 
 	position: relative;
 	margin: 0 auto;

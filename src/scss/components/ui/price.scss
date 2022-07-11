@@ -1,0 +1,28 @@
+.price {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	display: inline-flex;
+	flex-direction: column;
+
+	&__old {
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 500,
+			$size: em(12),
+			$line-height: em(16),
+		);
+
+		opacity: 0.7;
+		text-decoration-line: line-through;
+	}
+
+	&__sale {
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 900,
+			$size: em(18),
+			$line-height: em(21),
+		);
+	}
+}

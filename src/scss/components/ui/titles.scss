@@ -1,0 +1,11 @@
+.product-title {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	@include font(
+		$family: $font-family-montserrat,
+		$weight: 800,
+		$size: em(16),
+		$line-height: em(23),
+	);
+}

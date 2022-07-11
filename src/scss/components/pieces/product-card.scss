@@ -1,0 +1,83 @@
+.product-card {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	$card-height: 108.75%;
+	$z-indexes: (
+		'inner': 1,
+		'image': -99,
+		'fade': -99,
+	);
+	$button-add: '.button-add';
+	$button-info: '.button-info';
+	$product-title: '.product-title';
+	$product-price: '.price';
+
+	position: relative;
+	overflow: hidden;
+
+	// Inner Structure
+	&__bottom {
+		$height: em(107);
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: $height;
+
+		&-content-grid {
+			padding: em(13) 		// top
+					 em(19) 		// left
+					 em(18) 		// bottom
+					 em(28);		// right
+
+			#{$button-add} {
+				color: $color-white;
+
+				i {
+					color: $color-text-default;
+				}
+			}
+
+			#{$button-info} {
+
+				i {
+					color: $color-primary;
+				}
+			}
+
+			#{$product-title}, #{$product-price} {
+				color: $color-white;
+			}
+		}
+
+		&-fade {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: #262628;
+			opacity: 0.7;
+			z-index: map-get($z-indexes, 'fade');
+		}
+	}
+
+	// Structures
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		z-index: map-get($z-indexes, 'inner');
+	}
+
+	&__image {
+		padding-bottom: $card-height;
+		z-index: map-get($z-indexes, 'image');
+	}
+}

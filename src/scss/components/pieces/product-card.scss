@@ -5,9 +5,13 @@
 	$card-height: 108.75%;
 	$z-indexes: (
 		'inner': 1,
+		'aside': -99,
 		'image': -99,
 		'fade': -99,
+		'border': -1,
 	);
+
+	// Var-block
 	$button-add: '.button-add';
 	$button-info: '.button-info';
 	$product-title: '.product-title';
@@ -16,8 +20,8 @@
 	position: relative;
 	overflow: hidden;
 
-	// Inner Structure
-	&__bottom {
+	// Bottom Content
+	&__bottom-content {
 		$height: em(107);
 
 		position: absolute;
@@ -26,7 +30,7 @@
 		width: 100%;
 		height: $height;
 
-		&-content-grid {
+		&-grid {
 			padding: em(13) 		// top
 					 em(19) 		// left
 					 em(18) 		// bottom
@@ -65,6 +69,11 @@
 		}
 	}
 
+	// Aside Content
+	&__aside-content {
+		z-index: map-get($z-indexes, 'aside');
+	}
+
 	// Structures
 	&__inner {
 		position: absolute;
@@ -79,5 +88,105 @@
 	&__image {
 		padding-bottom: $card-height;
 		z-index: map-get($z-indexes, 'image');
+	}
+
+	&__border {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: map-get($z-indexes, 'border');
+
+		span {
+			position: absolute;
+			top: em(10);
+			left: em(13);
+			right: 0;
+			bottom: em(9);
+		}
+
+		// Top-bottom border
+		span:first-child {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: em(1);
+				background: $color-white;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: em(1);
+				background: $color-white;
+			}
+		}
+
+		// Left-right border
+		span:last-child {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: em(1);
+				height: 100%;
+				background: $color-white;
+			}
+		}
+	}
+}
+
+.card-aside-content {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: absolute;
+	top: em(28);
+	left: em(14);
+	width: 100%;
+
+	&__param {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		min-width: em(64);
+		height: em(35);
+		padding: 0 em(10) 0 em(12);
+		background: $color-white;
+
+		font-family: $font-family-roboto;
+		font-weight: 700;
+		font-size: em(14);
+		line-height: em(16);
+	}
+
+	&__brand {
+		display: inline-flex;
+		justify-content: flex-end;
+		position: absolute;
+		top: em(208);
+		left: em(165);
+		width: 100%;
+		white-space: nowrap;
+
+		color: $color-white;
+		font-family: $font-family-montserrat;
+		font-weight: 500;
+		font-size: em(14);
+		line-height: em(17);
+
+		transform: rotate(-90deg);
+		text-shadow: em(2) em(2) em(2) rgba(0, 0, 0, 0.25);
 	}
 }

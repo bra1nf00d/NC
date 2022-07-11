@@ -5,14 +5,15 @@
 	$card-height: 108.75%;
 	$z-indexes: (
 		'inner': 1,
-		'aside': -99,
+		'aside': -3,
 		'image': -99,
-		'fade': -99,
+		'fade': -2,
 		'border': -1,
 	);
 
 	// Var-block
 	$button-add: '.button-add';
+	$button-cross: '.button-cross';
 	$button-info: '.button-info';
 	$product-title: '.product-title';
 	$product-price: '.price';
@@ -72,6 +73,71 @@
 	// Aside Content
 	&__aside-content {
 		z-index: map-get($z-indexes, 'aside');
+	}
+
+	// Top
+	&__top-content {
+		$height: em(268.5);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: $height;
+		overflow: hidden;
+
+		&-inner {
+			height: 100%;
+			padding: em(41) em(20) em(0) em(30);
+			overflow: scroll;
+		}
+
+		&-group {
+			color: $color-white;
+			margin-bottom: em(17);
+
+			&-caption {
+				@include font(
+					$family: $font-family-roboto,
+					$weight: 700,
+					$size: em(14),
+					$line-height: em(20)
+				);
+
+				margin-bottom: em(6);
+			}
+
+			&-body {
+				@include font(
+					$family: $font-family-roboto,
+					$weight: 400,
+					$size: em(14),
+					$line-height: em(22)
+				);
+			}
+		}
+
+		&-fade {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: #262628;
+			opacity: 0.95;
+			z-index: map-get($z-indexes, 'fade');
+		}
+
+		&-close {
+			position: absolute;
+			top: em(16);
+			right: em(12);
+
+			#{$button-cross} {
+				color: $color-primary;
+			}
+		}
 	}
 
 	// Structures

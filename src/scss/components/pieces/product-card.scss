@@ -15,6 +15,7 @@
 	$button-add: '.button-add';
 	$button-cross: '.button-cross';
 	$button-info: '.button-info';
+	$button-amount: '.button-amount';
 	$product-title: '.product-title';
 	$product-price: '.price';
 
@@ -37,7 +38,11 @@
 					 em(18) 		// bottom
 					 em(28);		// right
 
-			#{$button-add} {
+			#{$button-amount} {
+				width: em(97);
+			}
+
+			#{$button-add}, #{$button-amount} {
 				color: $color-white;
 
 				i {

@@ -3,7 +3,6 @@
 	@function em($pixels) { @return em-closure($pixels, 17.25) }
 
 	$touch-area: 5;
-	margin: em($touch-area) em($touch-area);
 
 	display: inline-flex;
 	justify-content: space-between;

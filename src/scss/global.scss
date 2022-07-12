@@ -14,9 +14,11 @@
 
 // Style Pages
 @import "components/pages/products";
+@import "components/pages/cart";
 
 // Style Pieces of Page
 @import "components/pieces/product-card";
+@import "components/pieces/cart-item";
 
 // UI
 @import "components/ui/button-add";

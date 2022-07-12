@@ -1,0 +1,53 @@
+.button-amount {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	$touch-area: 5;
+	margin: em($touch-area) em($touch-area);
+
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__icon {
+		display: inline-flex;
+		align-items: center;
+		margin: em(-$touch-area) em(-$touch-area);
+		padding: em($touch-area) em($touch-area);
+
+		i {
+			$icon-size: 22;
+
+			position: relative;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: em($icon-size * 1.85);
+			height: em($icon-size * 1.85);
+			z-index: 1;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: $color-primary;
+				border-radius: em(99);
+				z-index: -1;
+			}
+
+			font-size: em($icon-size / 2.35);
+		}
+	}
+
+	&__number {
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 700,
+			$size: em(14),
+			$line-height: em(16),
+		);
+	}
+}

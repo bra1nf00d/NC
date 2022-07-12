@@ -1,0 +1,65 @@
+.radio-modifiers {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	display: flex;
+	margin: em(-6) em(-6);
+
+	&__item {
+		margin: em(6) em(6);
+
+	}
+
+	&__input {
+		display: none;
+
+		& ~ label > i:last-child {
+			display: none;
+		}
+
+		&:checked ~ label {
+			color: $color-text-default;
+			background: $color-primary;
+			border-color: $color-primary;
+		}
+
+		&:checked ~ label > i:first-child {
+			display: none;
+		}
+
+		&:checked ~ label > i:last-child {
+			display: inline-flex;
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+		position: relative;
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+
+		min-width: em(92);
+		height: em(33);
+		border-radius: em(100);
+		border: em(2) solid $color-white;
+		padding: em(0) em(30) em(0) em(12);
+
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 400,
+			$size: em(17),
+			$line-height: em(18),
+		);
+
+		i {
+			position: absolute;
+			display: inline-flex;
+			align-items: center;
+			height: 100%;
+			top: 0;
+			right: em(10);
+		}
+	}
+}
+

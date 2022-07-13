@@ -23,6 +23,7 @@
 @import "components/pieces/product-card";
 @import "components/pieces/cart-item";
 @import "components/pieces/segue";
+@import "components/pieces/menu";
 
 // UI
 @import "components/ui/button-add";
@@ -101,6 +102,10 @@ body {
 
 .error {
 	color: $color-required;
+}
+
+.lock {
+	overflow: hidden;
 }
 
 .required__mark {

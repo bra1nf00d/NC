@@ -3,7 +3,7 @@
 
 	position: relative;
 	height: em($header-height);
-	z-index: 99;
+	z-index: 999;
 
 	&__row {
 		display: flex;
@@ -32,28 +32,3 @@
 	}
 }
 
-.menu {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-
-	&__title {
-		@include font(
-			$family: $font-family-poppins,
-			$size: em(11),
-			$weight: 500,
-			$line-height: em(18),
-		);
-
-		letter-spacing: em(2.75);
-		text-transform: uppercase;
-	}
-
-	&__icon {
-		font-size: em(9);
-		margin-left: em(15);
-		margin-top: em(6);
-	}
-}

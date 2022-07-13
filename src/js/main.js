@@ -6,6 +6,7 @@ import { ButtonCross } from './structures/ui/ButtonCross';
 import { Cutter } from './utils/enums/cutter.enums';
 import { Select } from './structures/ui/Select';
 import { Form } from './structures/ui/Form';
+import { Menu } from './structures/ui/Menu';
 
 const listening = debounce(() => {
 	const fluidTypography = new FluidTypography();
@@ -14,6 +15,9 @@ const listening = debounce(() => {
 
 	const responsiveImage = new ResponsiveImage();
 	responsiveImage.onMounted();
+
+	const appMenu = new Menu();
+	appMenu.onMounted();
 
 	const buttonAmount = new ButtonAmount();
 	buttonAmount.onMounted();

@@ -4,13 +4,12 @@
 
 	$layout-width: em(375);
 
-	margin: 0 auto;
-	width: $layout-width;
-
 	position: fixed;
 	left: 0;
 	right: 0;
 	bottom: 0;
+	width: $layout-width;
+	margin: 0 auto;
 
 	&__inner {
 		display: flex;
@@ -38,7 +37,7 @@
 		align-items: center;
 		min-width: em(130);
 		color: $color-primary;
-		padding: em(12) em(30);
+		padding: em(12) em(36);
 		background: #131314;
 		box-shadow: 0 em(4) em(12) rgba(0, 0, 0, 0.15);
 		border-radius: em(100);

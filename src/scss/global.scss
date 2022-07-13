@@ -14,6 +14,7 @@
 
 // Style Pages
 @import "components/pages/products";
+@import "components/pages/order";
 @import "components/pages/cart";
 
 // Style Pieces of Page
@@ -31,6 +32,11 @@
 @import "components/ui/checkbox-modifier";
 @import "components/ui/page-article";
 @import "components/ui/filter";
+
+// Style Form
+@import "components/form/form";
+@import "components/form/select";
+
 
 html, body {
 	height: 100%;
@@ -63,8 +69,18 @@ body {
 
 .hidden {
 	display: none;
-	visibility: hidden;
-	opacity: 0;
+}
+
+.show {
+	display: block;
+}
+
+.error {
+	color: $color-required;
+}
+
+.required__mark {
+	color: $color-required;
 }
 
 // Styled Data-attributes

@@ -4,6 +4,8 @@ import { ResponsiveImage } from './structures/ResponsiveImage';
 import { ButtonAmount } from './structures/ui/ButtonAmount';
 import { ButtonCross } from './structures/ui/ButtonCross';
 import { Cutter } from './utils/enums/cutter.enums';
+import { Select } from './structures/ui/Select';
+import { Form } from './structures/ui/Form';
 
 const listening = debounce(() => {
 	const fluidTypography = new FluidTypography();
@@ -20,6 +22,9 @@ const listening = debounce(() => {
 	cartButtonCross.onClick((event) => {
 		event.currentTarget.closest('.cart__column').remove();
 	});
+
+	const orderForm = new Form('.order__form');
+	orderForm.onMounted();
 
 	const cutterProductTitle = new Cutter('.product-title');
 	cutterProductTitle.cut(36);

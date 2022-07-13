@@ -1,0 +1,54 @@
+.select {
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
+	$color-hover: #DBDBDB;
+
+	position: relative;
+
+	&__input {
+		display: none;
+	}
+
+	&__current {
+		padding: em(9) 0;
+		width: 100%;
+		text-align: left;
+
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 400,
+			$size: em(16),
+			$line-height: em(19),
+		);
+	}
+
+	&__list {
+		position: absolute;
+		top: em(32);
+		left: 0;
+		display: none;
+		width: 100%;
+		overflow: hidden;
+		background: $color-white;
+		z-index: 99;
+		padding: 0 0 em(6) 0;
+	}
+
+	&__item {
+		display: inline-block;
+		width: 100%;
+		text-align: left;
+		padding: em(4.5) 0;
+
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 400,
+			$size: em(16),
+			$line-height: normal,
+		);
+
+		&:hover {
+			background: $color-hover;
+		}
+	}
+}

@@ -9,3 +9,13 @@
 		$line-height: em(23),
 	);
 }
+
+.category-title {
+	//Breakpoint: 375 - fluid-px: 17.25
+	@function em($pixels) { @return em-closure($pixels, 17.25) }
+
+	font-family: $font-family-montserrat;
+	font-weight: 800;
+	font-size: em(30);
+	line-height: em(22);
+}

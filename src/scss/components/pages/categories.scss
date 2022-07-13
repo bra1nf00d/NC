@@ -1,0 +1,11 @@
+.categories {
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		flex: 0 0 50%;
+	}
+}

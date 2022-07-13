@@ -18,6 +18,7 @@ module.exports = {
 		'no-param-reassign': 'off',
 		'prefer-rest-params': 'off',
 		'class-methods-use-this': 'off',
+		'consistent-return': 'off',
 		'import/prefer-default-export': 'off',
 		'import/no-extraneous-dependencies': 'off',
 	},

@@ -1,0 +1,53 @@
+.segue {
+	// 18.75 - is the starting fluid-typography of the layout
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
+	$layout-width: em(375);
+
+	margin: 0 auto;
+	width: $layout-width;
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: em(65);
+		background: $color-white;
+		border-radius: em(20) em(20) 0 0;
+		box-shadow: 0 em(-2) em(10) rgba(0, 0, 0, 0.1);
+		padding: em(14) em(18) em(16) em(25);
+	}
+
+	&__price {
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 700,
+			$size: em(18),
+			$line-height: em(21),
+		);
+	}
+
+	&__button {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		min-width: em(130);
+		color: $color-primary;
+		padding: em(12) em(30);
+		background: #131314;
+		box-shadow: 0 em(4) em(12) rgba(0, 0, 0, 0.15);
+		border-radius: em(100);
+
+		@include font(
+			$family: $font-family-roboto,
+			$weight: 500,
+			$size: em(16),
+			$line-height: em(19),
+		);
+	}
+}

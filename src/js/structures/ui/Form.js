@@ -10,7 +10,7 @@ export class Form {
 	}
 
 	onMounted() {
-		if (!this.nodeList && !this.select && !this.sumbitButton) return;
+		if (!this.nodeList || !this.select || !this.sumbitButton) return;
 
 		this.select.onMounted();
 

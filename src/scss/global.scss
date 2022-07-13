@@ -14,12 +14,14 @@
 @import "components/structures/alignments";
 
 // Style Pages
+@import "components/pages/categories";
 @import "components/pages/products";
 @import "components/pages/order";
 @import "components/pages/cart";
 @import "components/pages/order-success";
 
 // Style Pieces of Page
+@import "components/pieces/category-card";
 @import "components/pieces/product-card";
 @import "components/pieces/cart-item";
 @import "components/pieces/segue";

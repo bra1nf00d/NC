@@ -1,0 +1,16 @@
+.categories {
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
+	margin-top: em(21);
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: em(-10) em(-10);
+	}
+
+	&__column {
+		flex: 0 0 50%;
+		padding: em(10) em(10);
+	}
+}

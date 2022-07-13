@@ -7,7 +7,7 @@
 		'inner': 1,
 		'aside': -3,
 		'image': -99,
-		'fade': -2,
+		'fade': -1,
 		'border': -1,
 	);
 
@@ -77,6 +77,9 @@
 
 	// Aside Content
 	&__aside-content {
+		position: absolute;
+		top: em(28);
+		left: em(14);
 		z-index: map-get($z-indexes, 'aside');
 	}
 
@@ -169,6 +172,8 @@
 		height: 100%;
 		z-index: map-get($z-indexes, 'border');
 
+		$border-weight: em(1);
+
 		span {
 			position: absolute;
 			top: em(10);
@@ -185,7 +190,7 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: em(1);
+				height: $border-weight;
 				background: $color-white;
 			}
 
@@ -195,7 +200,7 @@
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				height: em(1);
+				height: $border-weight;
 				background: $color-white;
 			}
 		}
@@ -207,7 +212,7 @@
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: em(1);
+				width: $border-weight;
 				height: 100%;
 				background: $color-white;
 			}
@@ -222,9 +227,6 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	position: absolute;
-	top: em(28);
-	left: em(14);
 	width: 100%;
 
 	&__param {
@@ -246,18 +248,20 @@
 		display: inline-flex;
 		justify-content: flex-end;
 		position: absolute;
-		top: em(208);
-		left: em(165);
+		top: em(167);
+		left: em(130);
 		width: 100%;
 		white-space: nowrap;
 
-		color: $color-white;
-		font-family: $font-family-montserrat;
-		font-weight: 500;
-		font-size: em(14);
-		line-height: em(17);
+		span {
+			color: $color-white;
+			font-family: $font-family-montserrat;
+			font-weight: 500;
+			font-size: em(14);
+			line-height: em(17);
+			text-shadow: em(2) em(2) em(2) rgba(0, 0, 0, 0.25);
+		}
 
 		transform: rotate(-90deg);
-		text-shadow: em(2) em(2) em(2) rgba(0, 0, 0, 0.25);
 	}
 }

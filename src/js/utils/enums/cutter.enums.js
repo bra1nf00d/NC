@@ -5,16 +5,16 @@ export class Cutter {
 		this.nodeList = Node.getAll(el);
 	}
 
-	cut(length) {
+	cut(length, endOfLine = '') {
 		if (!this.nodeList) return;
 
 		this.nodeList.forEach((nodeEl) => {
-			nodeEl.innerText = this.mutatingString(nodeEl.innerText, length);
+			nodeEl.innerText = this.mutatingString(nodeEl.innerText, length, endOfLine);
 		});
 	}
 
-	mutatingString(string, length) {
-		string = `${string[0].toUpperCase() + string.slice(1, length)} ...`;
+	mutatingString(string, length, endOfLine) {
+		string = `${string[0].toUpperCase() + string.slice(1, length)} ${endOfLine}`;
 		return string;
 	}
 }

@@ -75,8 +75,8 @@
 
 		$line-gradient: linear-gradient(90deg,
 						rgba(255,255,255,1) 0%,
-						rgba(255,255,255,1) 96.5%,
-						rgba(0,0,0,1) 96.5%,
+						rgba(255,255,255,1) 95%,
+						rgba(0,0,0,1) 95%,
 						rgba(0,0,0,1) 100%);
 		$border-weight: em(2);
 
@@ -84,7 +84,7 @@
 			position: absolute;
 			top: em(10);
 			left: em(13);
-			right: em(-12);
+			right: em(-17);
 			bottom: em(12);
 		}
 

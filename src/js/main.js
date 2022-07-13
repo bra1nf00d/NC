@@ -35,7 +35,10 @@ const listening = debounce(() => {
 	orderForm.onMounted();
 
 	const cutterProductTitle = new Cutter('.product-title');
-	cutterProductTitle.cut(36);
+	cutterProductTitle.cut(36, '...');
+
+	const cutterCategoryTitle = new Cutter('.category-title');
+	cutterCategoryTitle.cut(27);
 
 	console.log('App JS listening...');
 }, 0, false);

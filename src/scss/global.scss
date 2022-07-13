@@ -7,6 +7,7 @@
 
 // Style Modules
 @import "components/navigation/header";
+@import "components/navigation/tabbar";
 
 // Style Structures
 @import "components/structures/content-grid";
@@ -16,11 +17,14 @@
 @import "components/pages/products";
 @import "components/pages/order";
 @import "components/pages/cart";
+@import "components/pages/order-success";
 
 // Style Pieces of Page
 @import "components/pieces/product-card";
 @import "components/pieces/cart-item";
 @import "components/pieces/segue";
+@import "components/pieces/menu";
+@import "components/pieces/filter";
 
 // UI
 @import "components/ui/button-add";
@@ -32,7 +36,6 @@
 @import "components/ui/radio-modifier";
 @import "components/ui/checkbox-modifier";
 @import "components/ui/page-article";
-@import "components/ui/filter";
 
 // Style Form
 @import "components/form/form";
@@ -68,6 +71,27 @@ body {
 	min-height: 100%;
 }
 
+.copyright {
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
+	$layout-width: 375px;
+
+	position: fixed;
+	bottom: em(27);
+	left: 0;
+	right: 0;
+	max-width: $layout-width;
+	text-align: center;
+	margin: 0 auto;
+
+	@include font(
+		$family: $font-family-montserrat,
+		$weight: 500,
+		$size: em(14),
+		$line-height: normal,
+	);
+}
+
 .hidden {
 	display: none;
 }
@@ -78,6 +102,10 @@ body {
 
 .error {
 	color: $color-required;
+}
+
+.lock {
+	overflow: hidden;
 }
 
 .required__mark {

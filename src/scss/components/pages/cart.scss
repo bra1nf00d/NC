@@ -1,6 +1,8 @@
 .cart {
 	@function em($pixels) { @return em-closure($pixels, 18.75) }
 
+	padding-bottom: em(80);
+
 	&__row {
 		display: flex;
 		flex-wrap: wrap;

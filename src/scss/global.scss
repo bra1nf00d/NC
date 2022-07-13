@@ -16,6 +16,7 @@
 @import "components/pages/products";
 @import "components/pages/order";
 @import "components/pages/cart";
+@import "components/pages/order-success";
 
 // Style Pieces of Page
 @import "components/pieces/product-card";
@@ -66,6 +67,27 @@ body {
 	padding: $layout-spacing;
 	max-width: $layout-width;
 	min-height: 100%;
+}
+
+.copyright {
+	@function em($pixels) { @return em-closure($pixels, 18.75) }
+
+	$layout-width: 375px;
+
+	position: fixed;
+	bottom: em(27);
+	left: 0;
+	right: 0;
+	max-width: $layout-width;
+	text-align: center;
+	margin: 0 auto;
+
+	@include font(
+		$family: $font-family-montserrat,
+		$weight: 500,
+		$size: em(14),
+		$line-height: normal,
+	);
 }
 
 .hidden {

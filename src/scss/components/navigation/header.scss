@@ -1,7 +1,9 @@
 .header {
 	@function em($pixels) { @return em-closure($pixels, 18.75) }
 
+	position: relative;
 	height: em($header-height);
+	z-index: 99;
 
 	&__row {
 		display: flex;

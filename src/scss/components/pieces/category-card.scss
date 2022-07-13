@@ -10,6 +10,7 @@
 		'aside': -3,
 		'image': -99,
 		'fade': -1,
+		'border': -1,
 	);
 
 	position: relative;
@@ -51,6 +52,7 @@
 	}
 
 	&__inner {
+		cursor: pointer;
 		position: absolute;
 		top: 0;
 		left: 0;

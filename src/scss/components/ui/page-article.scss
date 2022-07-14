@@ -1,6 +1,5 @@
 .page-article {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	margin-top: em(28);
 	margin-bottom: em(18);
@@ -12,11 +11,9 @@
 	width: 100%;
 
 	&__title {
-		@include font(
-			$family: $font-family-montserrat,
-			$weight: 700,
-			$size: em(18),
-			$line-height: em(22),
-		)
+		font-family: $font-family-montserrat;
+		font-weight: 700;
+		font-size: em(18);
+		line-height: em(22);
 	}
 }

@@ -1,15 +1,12 @@
 .order-success {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	$layout-spacing: 0 em(15);
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: $layout-spacing;
+	padding: 0 em($layout-spacing);
 
 	&__container {
 		display: flex;
@@ -18,14 +15,11 @@
 		height: 100%;
 	}
 
-	&__frame-success {
-
-	}
+	&__frame-success {}
 }
 
 .frame-success {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	display: flex;
 	flex-direction: column;
@@ -53,12 +47,10 @@
 	}
 
 	&__caption, &__title {
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 700,
-			$size: em(22),
-			$line-height: em(26),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 700;
+		font-size: em(22);
+		line-height: em(26);
 	}
 
 	&__caption {
@@ -71,15 +63,12 @@
 	}
 
 	&__subtitle {
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(12),
-			$line-height: em(14),
-		);
-
 		color: #596273;
 		margin-bottom: em(36);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(12);
+		line-height: em(14);
 	}
 
 	&__button {
@@ -92,12 +81,9 @@
 
 		color: $color-white;
 		text-transform: uppercase;
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 500,
-			$size: em(14),
-			$line-height: normal,
-		);
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: em(14);
 
 		&:after {
 			content: '';

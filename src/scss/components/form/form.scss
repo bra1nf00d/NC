@@ -1,6 +1,5 @@
 .form {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	&__inner {
 		box-shadow: 0 em(4) em(15) rgba(0, 0, 0, 0.15);
@@ -22,44 +21,34 @@
 	&__label {
 		color: #989898;
 		margin-bottom: em(10);
-
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(14),
-			$line-height: em(16),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(14);
+		line-height: em(16);
 	}
 
 	&__textarea {
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(16),
-			$line-height: em(19),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(16);
+		line-height: em(19);
 	}
 
 	&__input {
 		height: em(32);
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(16),
-			$line-height: em(19),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(16);
+		line-height: em(19);
 	}
 
 	&__textarea {
 		resize: vertical;
-
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(16),
-			$line-height: em(19),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(16);
+		line-height: em(19);
 	}
 
 	&__select {

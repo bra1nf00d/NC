@@ -1,6 +1,5 @@
 .button-add {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	$touch-area: 10;
 
@@ -15,12 +14,9 @@
 	}
 
 	&__title {
-		@include font(
-			$family: $font-family-montserrat,
-			$weight: 700,
-			$size: em(14),
-			$line-height: normal,
-		);
+		font-family: $font-family-montserrat;
+		font-weight: 700;
+		font-size: em(14);
 	}
 
 	&__icon {

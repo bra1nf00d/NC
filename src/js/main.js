@@ -8,6 +8,7 @@ import { Select } from './structures/ui/Select';
 import { Form } from './structures/ui/Form';
 import { Menu } from './structures/ui/Menu';
 import { Filter } from './structures/ui/Filter';
+import { ProductCard } from './structures/ui/ProductCard';
 
 const listening = debounce(() => {
 	const fluidTypography = new FluidTypography();
@@ -33,6 +34,9 @@ const listening = debounce(() => {
 
 	const orderForm = new Form('.order__form');
 	orderForm.onMounted();
+
+	const productCard = new ProductCard();
+	productCard.onMounted();
 
 	const cutterProductTitle = new Cutter('.product-title');
 	cutterProductTitle.cut(36, '...');

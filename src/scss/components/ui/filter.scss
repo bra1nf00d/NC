@@ -1,6 +1,5 @@
 .filter {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	$touch-area: 10;
 

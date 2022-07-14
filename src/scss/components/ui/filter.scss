@@ -1,0 +1,75 @@
+.filter {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	$touch-area: 10;
+
+	margin: em(-$touch-area) em(-$touch-area);
+	padding: em($touch-area) em($touch-area);
+
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		$icon-size: 22;
+
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: em($icon-size);
+		height: em($icon-size);
+
+		i {
+			font-size: em($icon-size - 4);
+		}
+	}
+
+	&__collapse {
+		$layout-width: em(375);
+
+		cursor: auto;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: $layout-width;
+		background: $color-text-default;
+		margin: 0 auto;
+		z-index: 999;
+	}
+
+	&__list {
+		height: 100%;
+		overflow: scroll;
+		padding: em(70) 0 em(10) em(29);
+		margin: em(-15) 0;
+	}
+
+	&__item {
+		padding: em(15) 0;
+	}
+
+	&__link {
+		color: $color-white;
+		font-family: $font-family-roboto;
+		font-weight: 900;
+		font-size: em(16);
+		line-height: em(19);
+
+		i {
+			margin-right: em(15);
+		}
+	}
+
+	&__button-close {
+		$button-cross: '.button-cross';
+
+		position: absolute;
+		top: em(10);
+		right: em(10);
+
+		#{$button-cross} {
+			color: $color-primary;
+		}
+	}
+}

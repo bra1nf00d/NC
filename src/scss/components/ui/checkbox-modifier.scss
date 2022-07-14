@@ -1,0 +1,59 @@
+.checkbox-modifiers {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: em(-6) em(-6);
+
+	&__item {
+		margin: em(6) em(2);
+	}
+
+	&__input {
+		display: none;
+
+		& ~ label > i:last-child {
+			display: none;
+		}
+
+		&:checked ~ label {
+			color: $color-text-default;
+			background: $color-primary;
+			border-color: $color-primary;
+		}
+
+		&:checked ~ label > i:first-child {
+			display: none;
+		}
+
+		&:checked ~ label > i:last-child {
+			display: inline-flex;
+			font-size: em(12);
+			right: em(14);
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+		position: relative;
+		display: inline-flex;
+		justify-content: space-between;
+		align-items: center;
+
+		min-width: em(92);
+		height: em(35);
+		border-radius: em(100);
+		border: em(2) solid $color-white;
+		padding: em(0) em(32) em(0) em(12);
+
+		i {
+			position: absolute;
+			display: inline-flex;
+			align-items: center;
+			height: 100%;
+			top: 0;
+			right: em(10);
+		}
+	}
+}
+

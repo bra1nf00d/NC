@@ -1,0 +1,119 @@
+// Style Utils
+@import "utils/mixins";
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/fonts";
+@import "utils/reset";
+
+// Style Modules
+@import "components/navigation/header";
+@import "components/navigation/tabbar";
+
+// Style Pages
+@import "components/pages/categories";
+@import "components/pages/products";
+@import "components/pages/order";
+@import "components/pages/cart";
+@import "components/pages/order-success";
+@import "components/pages/about";
+
+// Style Pieces of Page
+@import "components/pieces/category-card";
+@import "components/pieces/product-card";
+@import "components/pieces/cart-item";
+
+// UI
+@import "components/ui/button-add";
+@import "components/ui/button-info";
+@import "components/ui/button-cross";
+@import "components/ui/button-amount";
+@import "components/ui/price";
+@import "components/ui/titles";
+@import "components/ui/radio-modifier";
+@import "components/ui/checkbox-modifier";
+@import "components/ui/page-article";
+@import "components/ui/content-grid";
+@import "components/ui/segue";
+@import "components/ui/menu";
+@import "components/ui/filter";
+
+// Style Form
+@import "components/form/form";
+@import "components/form/select";
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	color: $color-text-default;
+	font-family: $font-family-roboto;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
+	line-height: 1;
+}
+
+.mobile-layout {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	position: relative;
+	margin: 0 auto;
+	padding: 0 em($layout-spacing);
+	max-width: $layout-width;
+	min-height: 100%;
+}
+
+.copyright {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	position: fixed;
+	bottom: em(27);
+	left: 0;
+	right: 0;
+	max-width: $layout-width;
+	text-align: center;
+	margin: 0 auto;
+
+	font-family: $font-family-montserrat;
+	font-weight: 500;
+	font-size: em(14);
+}
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.error {
+	color: $color-required;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.required__mark {
+	color: $color-required;
+}
+
+// Styled Data-attributes
+div[data-responsive-image] {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	& img {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,17 @@
+.product-title {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	font-family: $font-family-montserrat;
+	font-weight: 800;
+	font-size: em(16);
+	line-height: em(23);
+}
+
+.category-title {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	font-family: $font-family-montserrat;
+	font-weight: 800;
+	font-size: em(30);
+	line-height: em(22);
+}

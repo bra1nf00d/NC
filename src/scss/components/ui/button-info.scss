@@ -1,0 +1,26 @@
+.button-info {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	$touch-area: 12;
+
+	margin: em(-$touch-area) em(-$touch-area);
+	padding: em($touch-area) em($touch-area);
+
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		$icon-size: 20;
+
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: em($icon-size);
+		height: em($icon-size);
+
+		i {
+			font-size: em($icon-size);
+		}
+	}
+}

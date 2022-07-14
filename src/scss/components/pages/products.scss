@@ -1,0 +1,16 @@
+.products {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	padding-bottom: em(72);
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: em(-20) em(-5);
+	}
+
+	&__column {
+		flex: 0 0 100%;
+		padding: em(20) em(5);
+	}
+}

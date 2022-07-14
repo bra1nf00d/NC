@@ -1,0 +1,34 @@
+.header {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	position: relative;
+	height: em($header-height);
+	z-index: 999;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__brand {}
+
+	&__menu {
+		margin-top: em(10);
+	}
+}
+
+.brand {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	height: em($header-height);
+
+	& img {
+		height: 100%;
+	}
+}
+

@@ -1,0 +1,16 @@
+.cart {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	padding-bottom: em(80);
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: em(-7.5) em(-2.5);
+	}
+
+	&__column {
+		flex: 0 0 100%;
+		padding: em(7.5) em(2.5);
+	}
+}

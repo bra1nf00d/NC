@@ -1,0 +1,30 @@
+.cart-item {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	$item-height: em(130);
+
+	position: relative;
+	overflow: hidden;
+	height: $item-height;
+	border-radius: em(15);
+	box-shadow: 0 em(4) em(15) rgba(0, 0, 0, 0.15);
+	background: $color-white;
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		padding: em(18) em(16) em(25) em(14);
+	}
+
+	&__content-grid {
+		height: 100%;
+
+		$button-amount: '.button-amount';
+
+		#{$button-amount} {
+			width: em(80);
+		}
+	}
+}

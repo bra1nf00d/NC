@@ -1,0 +1,259 @@
+.product-card {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	$card-height: 108.75%;
+	$z-indexes: (
+		'inner': 1,
+		'aside': -3,
+		'image': -99,
+		'fade': -1,
+		'border': -1,
+	);
+
+	// Var-block
+	$button-add: '.button-add';
+	$button-cross: '.button-cross';
+	$button-info: '.button-info';
+	$button-amount: '.button-amount';
+	$product-title: '.product-title';
+	$product-price: '.price';
+
+	position: relative;
+	overflow: hidden;
+
+	// Bottom Content
+	&__bottom-content {
+		$height: em(107);
+
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: $height;
+
+		&-grid {
+			padding: em(13) 		// top
+					 em(19) 		// left
+					 em(18) 		// bottom
+					 em(28);		// right
+
+			#{$button-amount} {
+				width: em(97);
+			}
+
+			#{$button-add}, #{$button-amount} {
+				color: $color-white;
+
+				i {
+					color: $color-text-default;
+				}
+			}
+
+			#{$button-info} {
+
+				i {
+					color: $color-primary;
+				}
+			}
+
+			#{$product-title}, #{$product-price} {
+				color: $color-white;
+			}
+		}
+
+		&-fade {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: #262628;
+			opacity: 0.7;
+			z-index: map-get($z-indexes, 'fade');
+		}
+	}
+
+	// Aside Content
+	&__aside-content {
+		position: absolute;
+		top: em(28);
+		left: em(14);
+		z-index: map-get($z-indexes, 'aside');
+	}
+
+	// Top
+	&__top-content {
+		$height: em(268.5);
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: $height;
+		overflow: hidden;
+
+		&-inner {
+			height: 100%;
+			padding: em(41) em(20) em(0) em(30);
+			overflow: scroll;
+		}
+
+		&-group {
+			color: $color-white;
+			margin-bottom: em(17);
+
+			&-caption {
+				font-family: $font-family-roboto;
+				font-weight: 700;
+				font-size: em(14);
+				line-height: em(20);
+				margin-bottom: em(6);
+			}
+
+			&-body {
+				font-family: $font-family-roboto;
+				font-weight: 400;
+				font-size: em(14);
+				line-height: em(22);
+			}
+		}
+
+		&-fade {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			background: #262628;
+			opacity: 0.95;
+			z-index: map-get($z-indexes, 'fade');
+		}
+
+		&-close {
+			position: absolute;
+			top: em(16);
+			right: em(12);
+
+			#{$button-cross} {
+				color: $color-primary;
+			}
+		}
+	}
+
+	// Structures
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: map-get($z-indexes, 'inner');
+	}
+
+	&__image {
+		padding-bottom: $card-height;
+		z-index: map-get($z-indexes, 'image');
+	}
+
+	&__border {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: map-get($z-indexes, 'border');
+
+		$border-weight: em(1);
+
+		span {
+			position: absolute;
+			top: em(10);
+			left: em(13);
+			right: 0;
+			bottom: em(9);
+		}
+
+		// Top-bottom border
+		span:first-child {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: $border-weight;
+				background: $color-white;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: $border-weight;
+				background: $color-white;
+			}
+		}
+
+		// Left-right border
+		span:last-child {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $border-weight;
+				height: 100%;
+				background: $color-white;
+			}
+		}
+	}
+}
+
+.card-aside-content {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+
+	&__param {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		min-width: em(64);
+		height: em(35);
+		padding: 0 em(10) 0 em(12);
+		background: $color-white;
+
+		font-family: $font-family-roboto;
+		font-weight: 700;
+		font-size: em(14);
+		line-height: em(16);
+	}
+
+	&__brand {
+		display: inline-flex;
+		justify-content: flex-end;
+		position: absolute;
+		top: em(167);
+		left: em(130);
+		width: 100%;
+		white-space: nowrap;
+
+		span {
+			color: $color-white;
+			font-family: $font-family-montserrat;
+			font-weight: 500;
+			font-size: em(14);
+			line-height: em(17);
+			text-shadow: em(2) em(2) em(2) rgba(0, 0, 0, 0.25);
+		}
+
+		transform: rotate(-90deg);
+	}
+}

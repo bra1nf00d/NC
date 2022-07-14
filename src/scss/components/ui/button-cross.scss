@@ -1,0 +1,24 @@
+.button-cross {
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
+
+	$touch-area: 10;
+
+	margin: em(-$touch-area) em(-$touch-area);
+	padding: em($touch-area) em($touch-area);
+
+	&__icon {
+		$icon-size: 20;
+
+		position: relative;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: em($icon-size);
+		height: em($icon-size);
+		z-index: 1;
+
+		i {
+			font-size: em($icon-size);
+		}
+	}
+}

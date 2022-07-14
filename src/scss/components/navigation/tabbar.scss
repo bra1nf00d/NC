@@ -1,0 +1,74 @@
+.tabbar {
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
+
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: em($layout-width);
+	margin: 0 auto;
+	z-index: 99;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		position: relative;
+		height: em(70);
+		padding: 0 em(42) em(12) em(42);
+	}
+
+	&__button {
+		position: absolute;
+		top: em(10);
+		left: 0;
+		right: 0;
+		width: em(53);
+		height: em(53);
+		margin: 0 auto;
+		background: #E0FF0A;
+		border-radius: em(100);
+		box-shadow: 0 em(4) em(12) rgba(0, 0, 0, 0.15),
+					0 em(2) em(5) rgba(224, 255, 10, 0.45);
+
+		i {
+			font-size: em(22);
+		}
+	}
+
+	&__item-count {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: em(12);
+		right: em(12);
+		width: em(28);
+		height: em(28);
+		border-radius: em(100);
+		padding: em(1.5) 0 0 em(1);
+		background: $color-white;
+
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: em(11);
+	}
+
+	&__title, &__price {
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: em(16);
+		line-height: em(19);
+	}
+
+	&__background {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+
+		img {
+			width: em($layout-width);
+		}
+	}
+}

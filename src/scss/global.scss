@@ -9,10 +9,6 @@
 @import "components/navigation/header";
 @import "components/navigation/tabbar";
 
-// Style Structures
-@import "components/structures/content-grid";
-@import "components/structures/alignments";
-
 // Style Pages
 @import "components/pages/categories";
 @import "components/pages/products";
@@ -25,9 +21,6 @@
 @import "components/pieces/category-card";
 @import "components/pieces/product-card";
 @import "components/pieces/cart-item";
-@import "components/pieces/segue";
-@import "components/pieces/menu";
-@import "components/pieces/filter";
 
 // UI
 @import "components/ui/button-add";
@@ -39,6 +32,10 @@
 @import "components/ui/radio-modifier";
 @import "components/ui/checkbox-modifier";
 @import "components/ui/page-article";
+@import "components/ui/content-grid";
+@import "components/ui/segue";
+@import "components/ui/menu";
+@import "components/ui/filter";
 
 // Style Form
 @import "components/form/form";

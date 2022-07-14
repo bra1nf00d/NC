@@ -23,11 +23,15 @@
 		&--left {
 			margin-right: auto;
 			justify-content: flex-start;
+			width: 75%;
 		}
 
 		&--right {
 			margin-left: auto;
 			justify-content: flex-end;
+			text-align: right;
+			margin-top:	auto;
+			margin-bottom: auto;
 		}
 	}
 }

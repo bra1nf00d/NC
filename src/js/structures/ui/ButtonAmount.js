@@ -9,8 +9,12 @@ export class ButtonAmount {
 		if (!this.nodeList) return;
 
 		this.nodeList.forEach((nodeEl) => {
-			this.onRender(nodeEl, 0);
-			let value = 0;
+			if (!nodeEl.querySelector('.button-amount__number')) return;
+			const amountEl = nodeEl.querySelector('.button-amount__number');
+			const amount = Number(amountEl.innerText);
+
+			this.onRender(nodeEl, amount ?? 0);
+			let value = amount ?? 0;
 
 			nodeEl.querySelector('.button-amount__icon--plus')
 				.addEventListener('click', () => {

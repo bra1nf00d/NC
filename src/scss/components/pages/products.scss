@@ -1,6 +1,8 @@
 .products {
 	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
+	padding-bottom: em(72);
+
 	&__row {
 		display: flex;
 		flex-wrap: wrap;

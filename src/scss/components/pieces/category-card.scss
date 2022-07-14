@@ -1,8 +1,5 @@
 .category-card {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) {
-		@return em-closure($pixels, 17.25)
-	}
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	$card-height: 122%;
 	$z-indexes: (
@@ -13,11 +10,12 @@
 		'border': -1,
 	);
 
+	// Var Blocks
+	$brand-block: '.card-aside-content__brand';
+
 	position: relative;
 
 	&__aside-content {
-		$brand-block: '.card-aside-content__brand';
-
 		position: absolute;
 		top: em(28);
 		left: 0;

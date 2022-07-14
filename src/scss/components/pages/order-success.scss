@@ -1,15 +1,12 @@
 .order-success {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	$layout-spacing: 0 em(15);
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: $layout-spacing;
+	padding: 0 em($layout-spacing);
 
 	&__container {
 		display: flex;
@@ -24,8 +21,7 @@
 }
 
 .frame-success {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	display: flex;
 	flex-direction: column;

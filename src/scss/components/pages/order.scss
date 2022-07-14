@@ -1,5 +1,5 @@
 .order {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	&__form {
 		margin-bottom: em(17);
@@ -23,7 +23,7 @@
 }
 
 .order-summary {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	&__inner {
 		box-shadow: 0 em(4) em(15) rgba(0, 0, 0, 0.15);

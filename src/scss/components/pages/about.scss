@@ -1,8 +1,7 @@
 .about {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	margin-top: em(52);
-
 
 	b {
 		display: inline-block;

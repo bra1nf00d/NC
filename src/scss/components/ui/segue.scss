@@ -1,14 +1,11 @@
 .segue {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	$layout-width: em(375);
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	position: fixed;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: $layout-width;
+	width: em($layout-width);
 	margin: 0 auto;
 	z-index: 99;
 

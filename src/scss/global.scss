@@ -58,23 +58,17 @@ body {
 }
 
 .mobile-layout {
-	// 18.75 - is the starting fluid-typography of the layout
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	$layout-width: 375px;
-	$layout-spacing: 0 em(15);
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	position: relative;
 	margin: 0 auto;
-	padding: $layout-spacing;
+	padding: 0 em($layout-spacing);
 	max-width: $layout-width;
 	min-height: 100%;
 }
 
 .copyright {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
-
-	$layout-width: 375px;
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	position: fixed;
 	bottom: em(27);

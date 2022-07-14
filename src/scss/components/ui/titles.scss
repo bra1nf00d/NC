@@ -1,6 +1,5 @@
 .product-title {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	@include font(
 		$family: $font-family-montserrat,
@@ -11,8 +10,7 @@
 }
 
 .category-title {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	font-family: $font-family-montserrat;
 	font-weight: 800;

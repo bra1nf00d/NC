@@ -3,7 +3,13 @@ $base-font-size					: 14px;
 $base-font-weight				: 400;
 
 // Sizes
+$layout-width					: 375px;
+$layout-spacing 				: 15px;
 $header-height					: 54px;
+
+// Constants
+$layout-fluid-size				: 18.75;
+$inner-fluid-size				: 17.25;
 
 // Fonts
 $font-family-roboto				: 'Roboto', sans-serif;

@@ -1,13 +1,11 @@
 .radio-modifiers {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	display: flex;
 	margin: em(-6) em(-6);
 
 	&__item {
 		margin: em(6) em(6);
-
 	}
 
 	&__input {

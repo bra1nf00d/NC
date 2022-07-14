@@ -1,6 +1,5 @@
 .price {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	display: inline-flex;
 	flex-direction: column;

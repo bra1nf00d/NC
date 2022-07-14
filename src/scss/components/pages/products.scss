@@ -1,5 +1,5 @@
 .products {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	&__row {
 		display: flex;

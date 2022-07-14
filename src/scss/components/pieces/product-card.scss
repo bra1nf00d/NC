@@ -1,6 +1,5 @@
 .product-card {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	$card-height: 108.75%;
 	$z-indexes: (
@@ -221,8 +220,7 @@
 }
 
 .card-aside-content {
-	//Breakpoint: 375 - fluid-px: 17.25
-	@function em($pixels) { @return em-closure($pixels, 17.25) }
+	@function em($pixels) { @return em-closure($pixels, $inner-fluid-size) }
 
 	display: flex;
 	justify-content: space-between;

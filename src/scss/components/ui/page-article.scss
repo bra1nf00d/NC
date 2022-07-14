@@ -11,11 +11,9 @@
 	width: 100%;
 
 	&__title {
-		@include font(
-			$family: $font-family-montserrat,
-			$weight: 700,
-			$size: em(18),
-			$line-height: em(22),
-		)
+		font-family: $font-family-montserrat;
+		font-weight: 700;
+		font-size: em(18);
+		line-height: em(22);
 	}
 }

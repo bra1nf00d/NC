@@ -1,5 +1,5 @@
 .select {
-	@function em($pixels) { @return em-closure($pixels, 18.75) }
+	@function em($pixels) { @return em-closure($pixels, $layout-fluid-size) }
 
 	$color-hover: #DBDBDB;
 
@@ -14,12 +14,10 @@
 		width: 100%;
 		text-align: left;
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(16),
-			$line-height: em(19),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(16);
+		line-height: em(19);
 	}
 
 	&__list {
@@ -40,12 +38,9 @@
 		text-align: left;
 		padding: em(4.5) 0;
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(16),
-			$line-height: normal,
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(16);
 
 		&:hover {
 			background: $color-hover;

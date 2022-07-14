@@ -43,12 +43,10 @@
 		border: em(2) solid $color-white;
 		padding: em(0) em(30) em(0) em(12);
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(17),
-			$line-height: em(18),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(17);
+		line-height: em(18);
 
 		i {
 			position: absolute;

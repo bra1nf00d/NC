@@ -48,13 +48,10 @@ html, body {
 
 body {
 	color: $color-text-default;
-
-	@include font(
-		$family: $font-family-roboto,
-		$size: $base-font-size,
-		$weight: $base-font-weight,
-		$line-height: 1,
-	)
+	font-family: $font-family-roboto;
+	font-weight: $base-font-weight;
+	font-size: $base-font-size;
+	line-height: 1;
 }
 
 .mobile-layout {
@@ -78,12 +75,9 @@ body {
 	text-align: center;
 	margin: 0 auto;
 
-	@include font(
-		$family: $font-family-montserrat,
-		$weight: 500,
-		$size: em(14),
-		$line-height: normal,
-	);
+	font-family: $font-family-montserrat;
+	font-weight: 500;
+	font-size: em(14);
 }
 
 .hidden {

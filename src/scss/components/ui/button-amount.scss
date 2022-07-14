@@ -41,11 +41,9 @@
 	}
 
 	&__number {
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 700,
-			$size: em(14),
-			$line-height: em(16),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 700;
+		font-size: em(14);
+		line-height: em(16);
 	}
 }

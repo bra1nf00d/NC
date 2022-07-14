@@ -9,12 +9,10 @@
 		display: inline-block;
 		margin-bottom: em(24);
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 500,
-			$size: em(14),
-			$line-height: em(16),
-		);
+		font-family: $font-family-roboto;
+		font-weight: 500;
+		font-size: em(14);
+		line-height: em(16);
 	}
 
 	&__summary {
@@ -37,12 +35,10 @@
 		letter-spacing: em(0.5);
 		margin-bottom: em(9);
 
-		@include font(
-			$family: $font-family-roboto,
-			$weight: 400,
-			$size: em(14),
-			$line-height: 180%
-		);
+		font-family: $font-family-roboto;
+		font-weight: 400;
+		font-size: em(14);
+		line-height: 180%;
 	}
 
 	&__total {
@@ -50,12 +46,10 @@
 		justify-content: space-between;
 		letter-spacing: em(0.5);
 
-		@include font(
-			$family: $font-family-poppins,
-			$weight: 700,
-			$size: em(14),
-			$line-height: 150%
-		);
+		font-family: $font-family-poppins;
+		font-weight: 700;
+		font-size: em(14);
+		line-height: 150%;
 	}
 
 	&__dotted-line {

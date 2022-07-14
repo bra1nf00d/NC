@@ -13,12 +13,29 @@ export class Menu {
 
 	targetToggle() {
 		this.nodeList.forEach((nodeEl) => {
+			let isOpened = false;
+
 			nodeEl.addEventListener('click', () => {
+				isOpened = !isOpened;
+
 				if (nodeEl.querySelector('.menu__collapse')) {
 					nodeEl.querySelector('.menu__collapse')
 						.classList.toggle('hidden');
 
 					document.body.classList.toggle('lock');
+				}
+
+				if (nodeEl.querySelector('.menu__title')) {
+					nodeEl.querySelector('.menu__title')
+						.innerText = isOpened ? 'закрыть' : 'menu';
+				}
+
+				if (nodeEl.querySelector('.menu__icon')) {
+					nodeEl.querySelector('.menu__icon i')
+						.classList.toggle('i-menu');
+
+					nodeEl.querySelector('.menu__icon i')
+						.classList.toggle('i-close');
 				}
 			});
 		});
